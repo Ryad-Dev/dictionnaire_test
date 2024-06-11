@@ -1,21 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio Dictionary</title>
+    <title>Dictionnaire Audio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Audio Dictionary</h1>
-    <input type="file" id="jsonFile" accept=".json">
-    <button id="loadWords">Load Words</button>
-    <div id="wordContainer"></div>
-    <button id="startRecording">Start Recording</button>
-    <button id="stopRecording" disabled>Stop Recording</button>
-    <ul id="wordList"></ul>
-
+    <header>
+        <h1>Dictionnaire Audio</h1>
+    </header>
+    <main>
+        <div class="upload-section">
+            <input type="file" id="jsonFile" accept=".json">
+            <button id="loadWords">Charger les mots</button>
+        </div>
+        <div class="navigation-section">
+            <button id="prevWord" disabled>Mot Précédent</button>
+            <button id="nextWord" disabled>Mot Suivant</button>
+        </div>
+        <div id="wordContainer"></div>
+        <div class="record-section">
+            <button id="startRecording">Commencer l'enregistrement</button>
+            <button id="stopRecording" disabled>Arrêter l'enregistrement</button>
+        </div>
+        <div id="review-section">
+            <audio id="audioPlayback" controls></audio>
+            <button id="saveRecording">Sauvegarder l'enregistrement</button>
+            <button id="discardRecording">Annuler l'enregistrement</button>
+        </div>
+        <ul id="wordList"></ul>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
-
